@@ -2,10 +2,6 @@ def hidden_word(secret: str, boards: str) -> bool:
     # Een leeg geheim woord is altijd verborgen
     if not secret:
         return True
-        
-    # Als het geheime woord langer is dan de schutting, past het nooit
-    if len(secret) > len(boards):
-        return False
 
     secret_pointer = 0
     secret_length = len(secret)
