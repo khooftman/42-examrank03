@@ -24,7 +24,7 @@ def owl_post_code(code: str, from_base: int, to_base: int) -> str:
     # 5. Omdraaien en samenvoegen tot eindresultaat
     return "".join(reversed(res))
 
-
+############################################################################################
 # alternatief met divmod
 def owl_post_code(code: str, from_base: int, to_base: int) -> str:
     if not (2 <= from_base <= 36) or not (2 <= to_base <= 36):
