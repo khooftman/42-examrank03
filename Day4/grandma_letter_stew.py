@@ -4,4 +4,4 @@ def letter_stew(jar_a: str, jar_b: str) -> bool:
     clean_b = [c for c in jar_b.lower() if c != " "]
     
     # Als de gesorteerde lijsten gelijk zijn, is de soep gelijk
-    return sorted(clean_a) == sorted(clean_b
+    return sorted(clean_a) == sorted(clean_b)
