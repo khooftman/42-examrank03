@@ -1,4 +1,24 @@
 def merge_harvest_rows(crate_a: list[int], crate_b: list[int]) -> list[int]:
+    merged_crate = []
+    pointer_a, pointer_b = 0, 0
+
+    # 1. Blijf vergelijken zolang beide lijsten items hebben
+    while pointer_a < len(crate_a) and pointer_b < len(crate_b):
+        if crate_a[pointer_a] <= crate_b[pointer_b]:
+            merged_crate.append(crate_a[pointer_a])
+            pointer_a += 1
+        else:
+            merged_crate.append(crate_b[pointer_b])
+            pointer_b += 1
+
+    # 2. Plak alles wat over is erachteraan
+    return merged_crate + crate_a[pointer_a:] + crate_b[pointer_b:]
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+def merge_harvest_rows(crate_a: list[int], crate_b: list[int]) -> list[int]:
     # Maak een lege lijst voor het eindresultaat
     merged_crate = []
     
