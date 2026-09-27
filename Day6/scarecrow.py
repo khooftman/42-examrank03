@@ -1,4 +1,26 @@
 def scarecrow_whisper(order: str, shift: int) -> str:
+    # Definieer het alfabet
+    abc = "abcdefghijklmnopqrstuvwxyz"
+    ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = []
+
+    for char in order:
+        if char in abc:
+            # Zoek de oude positie, tel de shift erbij op, en wrap met % 26
+            new_index = (abc.index(char) + shift) % 26
+            result.append(abc[new_index])
+        elif char in ABC:
+            new_index = (ABC.index(char) + shift) % 26
+            result.append(ABC[new_index])
+        else:
+            # Spaties en leestekens direct overnemen
+            result.append(char)
+
+    return "".join(result)
+
+#############################################################
+
+def scarecrow_whisper(order: str, shift: int) -> str:
     # Als de instructie leeg is, geven we een lege string terug
     if not order:
         return ""
