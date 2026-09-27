@@ -1,4 +1,14 @@
 def weather_vane_spin(markers: list[int], k: int) -> list[int]:
+    if not markers: return []  # Alleen nodig als de lijst écht leeg kan zijn
+    effective_k = k % len(markers)
+    return markers[-effective_k:] + markers[:-effective_k]
+
+
+
+###########################
+
+
+def weather_vane_spin(markers: list[int], k: int) -> list[int]:
     # Als de ring leeg is, valt er niets te draaien
     if not markers:
         return []
