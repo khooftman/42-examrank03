@@ -1,5 +1,5 @@
 def seed_packet_sort(labels: list[str]) -> list[str]:
-    def sort_key(label: str):
+    def sort_key(label: str) -> tuple[int, str, int]:
         vowels = sum(1 for c in label if c.lower() in 'aeiou')
         return (len(label), label.lower(), vowels)
 
