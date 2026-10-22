@@ -1,19 +1,22 @@
 def zigzag_paint(phrase: str) -> str:
+    if not phrase:
+        return ""
+
     result = []
     lower_turn = True
 
     for char in phrase:
-        # Pas de case toe op basis van de boolean
-        result.append(char.lower() if lower_turn else char.upper())
-        
-        # Alleen de beurt omdraaien als het een letter is, of als het een spatie is (en terugzet naar True)
         if char == " ":
+            result.append(char)
             lower_turn = True
         elif char.isalpha():
+            # Compacte en professionele manier om de case aan te passen
+            result.append(char.lower() if lower_turn else char.upper())
             lower_turn = not lower_turn
+        else:
+            result.append(char)
 
     return "".join(result)
-
 
 
 
