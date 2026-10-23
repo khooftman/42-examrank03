@@ -5,3 +5,10 @@ def letter_stew(jar_a: str, jar_b: str) -> bool:
     
     # Als de gesorteerde lijsten gelijk zijn, is de soep gelijk
     return sorted(clean_a) == sorted(clean_b)
+
+
+###########################################
+
+def letter_stew(jar_a: str, jar_b: str) -> bool:
+    return sorted(jar_a.lower().replace(" ", "")) == sorted(jar_b.lower().replace(" ", ""))
+
