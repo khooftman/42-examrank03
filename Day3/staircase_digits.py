@@ -17,3 +17,12 @@ def staircase_digits(lock: str) -> int:
                 step_count += 1
 
     return step_count
+
+############################################################## alternative to skip digits
+
+def is_alpha_palindrome(text: str) -> bool:
+    cleaned = "".join(char.lower() for char in text if char.isalpha())
+    
+    if not cleaned:
+        return False
+    return cleaned == cleaned[::-1]
