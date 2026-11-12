@@ -20,6 +20,19 @@ def scarecrow_whisper(order: str, shift: int) -> str:
 
 #############################################################
 
+def shift_letters(text: str, amount: int) -> str:
+    result = ""
+
+    for char in text:
+        if  "a" <= char <= "z":
+            result += chr((ord(char) - ord("a") + amount) % 26 + ord("a"))
+        elif  "A" <= char <= "Z":
+            result += chr((ord(char) - ord("A") + amount) % 26 + ord("A"))
+        else:
+            result += char
+    return result
+###############################################
+
 def scarecrow_whisper(order: str, shift: int) -> str:
     # Als de instructie leeg is, geven we een lege string terug
     if not order:
