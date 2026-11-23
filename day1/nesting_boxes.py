@@ -1,3 +1,5 @@
+#delimiters_balanced
+
 def nesting_boxes(tags: str) -> bool:
     stack = []
     
