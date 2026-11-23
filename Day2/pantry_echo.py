@@ -1,3 +1,5 @@
+#is_alpha_palindrome
+
 def echo_chant(label: str) -> bool:
     cleaned = "".join(label.split()).lower()
 
