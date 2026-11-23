@@ -1,3 +1,4 @@
+#count_digit_steps
 def staircase_digits(lock: str) -> int:
     # Als de string leeg is of te kort voor een paar, zijn er 0 stappen
     if len(lock) < 2:
