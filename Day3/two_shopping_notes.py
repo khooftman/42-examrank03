@@ -1,3 +1,5 @@
+#common letters
+
 def shared_letters(note_a: str, note_b: str) -> str:
     set_b = set(note_b)
     seen = set()
