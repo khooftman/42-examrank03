@@ -12,11 +12,6 @@ def letter_stew(jar_a: str, jar_b: str) -> bool:
 ###########################################
 
 def letter_stew(jar_a: str, jar_b: str) -> bool:
-    return sorted(jar_a.lower().replace(" ", "")) == sorted(jar_b.lower().replace(" ", ""))
-
-###########################################
-
-def letter_stew(jar_a: str, jar_b: str) -> bool:
     clean_a = "".join(jar_a.lower().split())
     clean_b = "".join(jar_b.lower().split())
 
