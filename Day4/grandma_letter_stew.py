@@ -1,3 +1,5 @@
+#loose_anagram
+
 def letter_stew(jar_a: str, jar_b: str) -> bool:
     # Maak alles lowercase en haal spaties weg via een list comprehension
     clean_a = [c for c in jar_a.lower() if c != " "]
