@@ -1,3 +1,5 @@
+#is_subsequence
+
 def hidden_word(secret: str, boards: str) -> bool:
     # Een leeg geheim woord is altijd verborgen
     if not secret:
